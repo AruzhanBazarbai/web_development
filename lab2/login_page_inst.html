@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Instagram</title>
+        <style>
+            body{
+                background-color: #fafafa;
+            }
+            #block1{
+                float:left;
+                margin:80px 10px 0px 570px;
+            }
+            #block2{
+                
+                text-align: center;
+                width:370px;
+                height: 500px;
+                float: right;
+                margin:93px 570px 220px 0px;
+                
+            }
+            #block3{
+                clear:both;
+                margin-top: 30px;
+                text-align: center;
+                word-spacing: 15px;
+                font-size:14px;
+                line-height: 25px;
+                
+            }
+            #block2_2, #block2_1{
+                background-color:#ffffff;
+                border:0.5px solid black;
+                border-color: #e4e4e4;
+            }
+            #block2_2{
+                margin-top:15px;
+                margin-bottom: 25px;
+            }
+            #block2_3{
+                line-height: 10px;
+            }
+            .input1{
+                width:80%;
+                height: 30px;
+                margin:5px 0px 0px 5px;
+                border-color: #e4e4e4;
+                border:0.5px solid  #e4e4e4;
+                background-color:   #fafafa
+            }
+            #vhod{
+                width:82%;
+                height: 30px;
+                margin:15px;
+                background-color: #86c8fa;
+                color: white;
+                border-color:white;
+            }
+            .zab_par{
+               line-height: 30px;
+            }
+            .zab_par, #zar{
+                text-decoration: none;
+            }
+            #fb{
+                color:#0d2c44;
+            }
+            #zp{
+                color:#355064;
+            }
+            #zar{
+                color: #197dca;
+            }
+            .ili{
+                position: relative;
+                display:flex;
+                justify-content: space-between;
+                text-align: center;
+                left:170px;
+            }
+            .ili:before, .ili:after{
+                content: '';
+                position: absolute;
+                top:10px;
+                left:-130px;
+                width: 90px;
+                background-color: black;
+                height: 0.5px;
+                
+            }
+            .ili:after{
+                width:100px;
+                right:210px;
+                left:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="big_one">
+            <div id="block1">
+                <img src="inst.png" width="412">
+            </div>
+            <div id="block2">
+                <div id="block2_1" >
+                    <img style="margin:20px" src="inst2.png" width="200">
+                    <form>
+                        <input class="input1" type="email" placeholder="Телефон, имя пользователя или эл.адрес"> <br>
+                        <input class="input1" type="password" placeholder="Пароль"> <br>
+                        <input id="vhod" type="submit" value="Войти"> <br>
+                        <div >
+                            <p class="ili">или</p> <br>
+                        </div>
+                        <img src="inst4.png" width="15">
+                        <a class="zab_par" href="" target="_blank" id="fb"><strong>Войти через Facebook</strong></a> <br>
+                        <a class="zab_par" href="" target="_blank" id="zp">Забыли пароль?</a> <br>
+
+                    </form>
+                </div>
+                <div id="block2_2">
+                    <p>У вас ещё нет аккаунта? <a href="" target="_blank" id="zar"><strong>Зарегистрироваться</strong></a></p> <br>
+                </div>
+                <div id="block2_3">
+                    <p>Установите приложение.</p> <br>
+                    <img src="inst3.png" width="400"> <br>
+                </div>
+            </div>
+            <div id="block3">
+                <p style="color:#919191">
+                    <a style="text-decoration: none;">Meta</a>
+                    <a style="text-decoration: none;">Информация</a>
+                    <a style="text-decoration: none;">Блог</a>
+                    <a style="text-decoration: none;">Вакансии</a>
+                    <a style="text-decoration: none;">Помощь</a>
+                    <a style="text-decoration: none;">API</a>
+                    <a style="text-decoration: none;">Конфиденциальность</a>
+                    <a style="text-decoration: none;">Условия</a>
+                    <a style="text-decoration: none;">Популярные аккаунты</a>
+                    <a style="text-decoration: none;">Хэштеги</a>
+                    <a style="text-decoration: none;">Места</a>
+                    <a style="text-decoration: none;">Instagram Lite</a> <br>
+                    <a style="text-decoration: none;">Красота</a>
+                    <a style="text-decoration: none;">Танцы</a>
+                    <a style="text-decoration: none;">Фитнес</a>
+                    <a style="text-decoration: none;">Еда и напитки</a>
+                    <a style="text-decoration: none;">Дом и сад</a>
+                    <a style="text-decoration: none;">Музыка</a>
+                    <a style="text-decoration: none;">Изобразительное искусство</a> <br> <br>
+                    <a style="text-decoration: none;">Русский</a>
+                    <a style="text-decoration: none;">© 2022 Instagram from Meta</a>
+                    </p>
+            </div>
+        </div>
+    </body>
+</html>
