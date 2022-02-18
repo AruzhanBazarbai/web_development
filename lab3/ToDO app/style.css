@@ -1,0 +1,61 @@
+#blackH{
+    font-size: 20px;
+    padding-left: 40px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border:1px solid black;
+    background-color: black;
+    color:rgb(168, 168, 168);
+}
+#mainBlock{
+    display: flex;
+    flex-direction: column;
+    /* width:70%; */
+    justify-content: center; 
+    align-items: center;
+}
+#blackH,#toDoHeader{
+    font-family:sans-serif;
+}
+#toDoHeader{
+    font-size: 35px;
+    color:rgb(51, 51, 51);
+    margin-left:-500px;
+
+}
+.addInput, .addButton{
+    display: inline-block;
+}
+.addTask{
+    margin-bottom: 30px;
+}
+#input{
+    width: 700px;
+    height: 30px;
+    border:0.5px solid rgb(212, 210, 210);
+    border-radius:5px;
+    color:black;
+    box-shadow:inset 1px 0px 2px 0px  aliceblue;
+    
+}
+#btnTask{
+    height:34.5px;
+    width:50px;
+    margin-left:20px;
+    color:white;
+    background-color: rgb(44, 117, 160);
+    border-radius: 5px;
+    border:none;
+}
+.buttons,.descItem{
+    display: inline-block;
+    
+}
+.todoItem{
+    border:1px solid black;
+    box-sizing: border-box;
+}
+.todoItem.checked{
+    background-color: darkgray;
+    opacity: 0.5;
+}
