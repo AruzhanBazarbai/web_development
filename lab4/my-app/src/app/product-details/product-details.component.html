@@ -1,0 +1,18 @@
+<h1 class="product-details-block"><strong>Product details</strong></h1>
+<div *ngIf="product" class="product-details-block">
+    <h3>{{product.name}}</h3>
+    <p ><img src="{{product.image}}" width="200px"></p>
+    <p><strong>Brand: </strong>{{product.brand}}</p>
+    <h4><strong>Price: </strong>{{product.price | currency}}</h4>
+    <p><strong>Description: </strong>{{product.description}}</p>
+    <p><strong>Rating: </strong>{{product.rating}}</p>
+    <p>
+        <strong>Likes: </strong>{{product.like}} 
+        <button type="button" (click)="addLike(product)" style="background-color:rgb(240, 148, 194);">like</button> 
+    </p>
+    
+    <button type="button" (click)="addToCart(product)">Buy</button>  <!--binding the click event and function addToCart--> 
+    <br>
+    <p><a href="{{product.link}}">link to amazon</a></p>
+    
+</div>

@@ -1,0 +1,8 @@
+.main-app-block{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+p{
+    font-size: 25px;
+}

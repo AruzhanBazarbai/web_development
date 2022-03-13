@@ -1,0 +1,6 @@
+<div *ngFor="let c of ctg" class="main-app-block">
+    <br>
+    <img src="{{c.image}}" width="400px" > <br>
+    <p><a [routerLink]="['/category',c.category]">{{c.category}}</a></p>
+    
+  </div>

@@ -1,0 +1,35 @@
+<h1 class="product-list-block"><strong>Products</strong></h1>
+
+<div *ngFor="let product of products" class="product-list-block">
+  <div *ngIf="ctg && ctg.category===product.category">
+  <h3>
+    <a
+    [title]="product.name+' details'" 
+    [routerLink]="['./products',product.id]">
+   {{product.name}}
+    </a>
+  </h3>
+
+  <app-product-item [product]="product"></app-product-item>
+  
+  <a href="https://telegram.org/" ><button type="button"  >Share</button></a>
+  <!-- <button type="button" (click)="share()" >Share</button> -->
+  <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+  </div>
+</div>
+
+<!-- <div *ngFor="let product of products">
+  <h3>
+    <a
+    [title]="product.name+' details'" 
+    [routerLink]="['/products',product.id]">
+   {{product.name}}
+    </a>
+  </h3>
+
+  <app-product-item [product]="product"></app-product-item>
+
+  <a href="https://telegram.org/" ><button type="button"  >Share</button></a>
+  <button type="button" (click)="share()" >Share</button> -->
+  <!-- <app-product-alerts [product]="product" (notify)="onNotify()"></app-product-alerts>
+</div> -->

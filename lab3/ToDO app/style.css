@@ -54,8 +54,15 @@
 .todoItem{
     border:1px solid black;
     box-sizing: border-box;
+    width:780px;
+    display: flex;
+    margin: 10px;
 }
 .todoItem.checked{
     background-color: darkgray;
     opacity: 0.5;
 }
+/* .buttons{
+    display:flex;
+    justify-content: end;
+} */
