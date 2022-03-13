@@ -4,6 +4,11 @@
 </fieldset>
 <ul>
     <li *ngFor="let task of newTasks">
-        <p>{{task.id}}) {{task.title}}</p>
+        <app-task-item [task]="task" 
+        (remove)="onTaskRemove($event)"></app-task-item>
     </li>
 </ul>
+<!-- []---inputs for component -->
+<!-- ()---outputs from component -->
+<!-- <p>{{task.id}}) {{task.title}}</p>
+        <button (click)="removeTask(task.id)">remove </button> -->

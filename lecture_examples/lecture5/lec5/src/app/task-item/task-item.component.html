@@ -1,0 +1,2 @@
+<p *ngIf="task">{{task.id}}) {{task.title}}</p>
+<button *ngIf="task" (click)="removeTask(task.id)">remove </button>
