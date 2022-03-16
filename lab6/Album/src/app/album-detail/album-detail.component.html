@@ -1,0 +1,18 @@
+<h2 class="album-detail">Albums</h2>
+<div *ngIf="loaded && item">
+    <fieldset style="width:600px;">
+        <label for=""><strong>Change the title:</strong></label>
+        <input type="text" [(ngModel)]="title" style="width:420px;">
+        <button type="submit" (click)="updatePost(item)">Save</button>
+    </fieldset>
+    <h3>Album #{{item.id}}</h3>
+    <p>{{item.title}}</p>
+    <a routerLink="/albums/{{item.id}}/photos">Photos</a>
+</div>
+<div *ngIf="!loaded">
+    <h3>Page is loading...</h3>
+</div>
+<br>
+<div>
+    <button type="button" (click)="returnBack()">Back</button>
+</div>

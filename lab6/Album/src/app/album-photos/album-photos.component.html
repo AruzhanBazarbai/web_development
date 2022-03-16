@@ -1,0 +1,12 @@
+<div *ngIf="loaded">
+    <h2>Photos #{{photos[0].albumId}}</h2>
+    <button type="button" (click)="returnBack()">Back</button>
+    <div *ngFor="let photo of photos">
+        <p>{{photo.id}}) {{photo.title}}</p>
+        <img src="{{photo.thumbnailUrl}}">
+    </div>
+    
+</div>
+<div *ngIf="!loaded">
+    <h3>Page is loading...</h3>
+</div>

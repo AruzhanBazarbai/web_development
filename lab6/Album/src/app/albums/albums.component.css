@@ -1,0 +1,16 @@
+button{
+    margin-left: 10px;
+}
+h2{
+    padding-left: 30px;
+    font-family: monospace;
+    background-color: rgb(210, 165, 216);
+}
+a{
+    text-decoration: none;
+    color:black;
+}
+a:hover{
+    color:blue;
+    text-decoration: underline;
+}

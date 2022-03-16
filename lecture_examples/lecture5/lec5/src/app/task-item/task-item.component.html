@@ -1,2 +1,21 @@
-<p *ngIf="task">{{task.id}}) {{task.title}}</p>
-<button *ngIf="task" (click)="removeTask(task.id)">remove </button>
+<!--<p [ngClass]="task.isDone ? 'done_task' : '' ">{{task.id}}) {{task.title}}</p>-->
+<p *ngIf="task" [class.done_task]="task.isDone">{{task.id}}) {{task.title}}</p>
+<p *ngIf="task">
+  <input type="checkbox"
+         [(ngModel)]="task.isDone"
+         (change)="isDoneChanged()"> Done?
+</p>
+<button *ngIf="task" (click)="removeTask(task.id)">remove</button>
+<!-- ########### -->
+<!-- [checked]="false" -is input event, that has the value(true or false), и если false то chackbox is unchecked, if true->cheked 
+(change)="f()"- is output event, and will call the function f() if there is occur any changes -->
+<!-- ##########" -->
+<!-- [ngClass]="expression" -input class, and we can write any expression and in the result of this there will be added any class
+for example [ngClass]="task.isDone ? 'done_task' : '' " -- class will be done_task if isDone->true or nothing if isDone->false -->
+<!-- ########## -->
+<!-- [class.done_task]="task.isDone" --is class input property, and it will depend of the value of isDone. 
+    if isDone->true there will be written done_task -->
+<!-- ########## -->
+<!-- starting from creating new components until removing this from web page, we have many different types of states and events. that can be handled with methods.
+    and this methods called Lifecycles. They can be used using  the interfaces.
+ -->
