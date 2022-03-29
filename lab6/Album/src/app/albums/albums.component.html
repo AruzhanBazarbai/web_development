@@ -1,7 +1,24 @@
 <h2>Welcome to <strong style="color:red">Albums</strong> page!</h2>
 <button type="button" (click)="returnBack()">Back</button>
 <div *ngIf="loaded">
-    <div  *ngFor="let item of albums">
+    <fieldset style="width:600px;">
+        <label for=""><strong>Enter:</strong></label>
+        <input type="text" [(ngModel)]="data"  style="width:480px;">
+        <button type="submit" (click)="filter()">Find</button>
+    </fieldset>
+    <div *ngIf="!filterState">
+        <div  *ngFor="let item of albums">
+            <ul>
+                <li>
+                    <a routerLink="/albums/{{item.id}}">{{item.id}}) {{item.title}}</a>
+                    <button type="button" (click)="deleteItem(item.id)">delete</button>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div *ngIf="filterState">
+    <div  *ngFor="let item of filteredData">
         <ul>
             <li>
                 <a routerLink="/albums/{{item.id}}">{{item.id}}) {{item.title}}</a>

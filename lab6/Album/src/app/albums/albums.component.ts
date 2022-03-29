@@ -10,7 +10,11 @@ import { Location } from '@angular/common';
 })
 export class AlbumsComponent implements OnInit {
   albums : Album[] =[];
+  // mainData: Album[]=[];
+  filterState:boolean=false;
   loaded: boolean;
+  data:string="";
+  filteredData: Album[]=[];
   constructor(private albumsService: AlbumsService,
     private location: Location) {
     this.loaded=true;
@@ -25,6 +29,7 @@ export class AlbumsComponent implements OnInit {
       this.albums=albums;
       this.loaded=true;
     });
+    // this.mainData=this.albums;
   }
   deleteItem(id:number){
     this.albums=this.albums.filter(x=>x.id!==id);
@@ -34,6 +39,15 @@ export class AlbumsComponent implements OnInit {
   }
   returnBack(){
     this.location.back();
+  }
+  filter(){
+    // this.getItems();
+    // this.albums=this.mainData;
+    this.filterState=true;
+    this.filteredData=this.albums.filter(x=>{
+        return x.title.search(this.data)!==-1 ;
+    });
+    // this.albums=this.filteredData;
   }
   
 

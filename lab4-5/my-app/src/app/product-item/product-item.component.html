@@ -2,7 +2,15 @@
     <p *ngIf="product" class="image"><img src="{{product.image}}" width="100px"></p>
     <p *ngIf="product"><strong>Price:</strong> {{product.price | currency}}</p>
     <p *ngIf="product && product.description"><strong>Description:</strong> {{product.description}}</p>
-    <p *ngIf="product"><strong>Rating:</strong> {{product.rating}}</p>
+    <p *ngIf="product"><strong>Rating:</strong> {{product.rating}}</p> 
+    <div *ngIf="ratingActive">
+        <button type="button" (click)="addRatingOne(product)">1</button>
+        <button type="button" (click)="addRatingSecond(product)">2</button>
+        <button type="button" (click)="addRatingThree(product)">3 </button>
+        <button type="button" (click)="addRatingFour(product)">4</button>
+        <button type="button" (click)="addRatingFive(product)">5</button>
+    </div>
+    <button *ngIf="!ratingActive && ratingState" type="button" (click)="changeStateOfRating()"> Add Rating</button>
     <p>
         <strong>Likes: </strong>{{product.like}} 
         <button type="button" (click)="addLike(product)" style="background-color:rgb(240, 148, 194);">like</button> 
