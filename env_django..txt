@@ -1,0 +1,13 @@
+py -m venv 'env-name' ----->sozdanie env
+env-name\Scripts\activate.bat  --->activation of env
+pip install django --->esli netu
+django-admin startproject demo  --->creation a project
+cd demo  --->
+python manage.py migrate  ---->creation db
+python manage.py runserver    ------->zapusk proekta
+
+pip freeze > requirements.txt   -------->Create requirements.txt for current env
+pip install -r requirements.txt   ------------>Install all modules from requirements.txt file recursive
+
+python manage.py createsuperuser ----->creation of admin
+python manage.py startapp new-app  ------------>creation of application
