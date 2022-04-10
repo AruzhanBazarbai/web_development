@@ -1,0 +1,7 @@
+company example
+{
+    "name":"Company 4",
+    "description":"ccc",
+    "city":"London",
+    "address":"address 5"
+}

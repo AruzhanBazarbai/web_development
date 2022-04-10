@@ -2,6 +2,8 @@
 from django.shortcuts import render
 from django.http.response import HttpResponse, JsonResponse
 from datetime import datetime, timedelta
+
+from lecture_examples.lecture10.lec10.main.models import Product
 def hello(request):
     return HttpResponse('<h1>Hello world!</h1>') #returns http template
 
@@ -32,5 +34,14 @@ def product_detail(request, product_id):
         if product['id']==product_id:
             return JsonResponse(product)
     return JsonResponse({'message':'selected product not found'})
+    
+# можно без трай экзепт вот так писать с помощью филтер и взять первый рез
+# def product_detail(request, product_id):
+#     product=Product.objects.filter(id=product_id).first()
+#     if product:
+#         return JsonResponse(product.to_json())
+#     else:
+#         return JsonResponse({'message':"Product not found"})
+
 
 # Create your views here.
