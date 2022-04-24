@@ -1,0 +1,13 @@
+<div class="box1" *ngIf="!logged">
+  <h1>Login form</h1>
+  <p>Username: <input type="text" [(ngModel)]="username"></p>
+  <p>Password: <input type="text" [(ngModel)]="password"></p>
+  <button (click)="login()">Login</button>
+</div>
+
+<div *ngIf="logged">
+  <a class="box2" routerLink="companies/"><h1>Companies</h1></a>
+  <router-outlet></router-outlet>
+  <a routerLink="/"><button class="box3" (click)="logout()">Logout</button></a>
+</div>
+

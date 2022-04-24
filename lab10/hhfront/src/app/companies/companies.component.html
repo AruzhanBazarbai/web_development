@@ -1,0 +1,10 @@
+<div>
+<button type="submit" (click)="goBack()">Return Back</button> <br>
+<ul *ngFor="let c of companies">
+  <a routerLink="/companies/{{c.id}}/vacancies"><li><h3 style="background-color: #eab0db; width:200px;
+                                ">{{c.id}}. {{c.name}}</h3></li></a>
+  <p><strong>Description:</strong> {{c.description}}</p>
+  <p><strong>City:</strong> {{c.city}}</p>
+  <p><strong>Address:</strong> {{c.address}}</p>
+</ul>
+</div>

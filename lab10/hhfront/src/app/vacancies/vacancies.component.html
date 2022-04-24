@@ -1,0 +1,9 @@
+<div>
+<h1>Vacancies</h1>
+<button type="submit" (click)="goBack()">Return Back</button> <br>
+<ul *ngFor="let v of vacancies">
+  <h2><li>Vacancy: {{v.id}}-{{v.name}}</li></h2>
+  <p><strong>Description: </strong>{{v.description}}</p>
+  <p><strong>Salary: </strong>{{v.salary}}$</p>
+</ul>
+</div>

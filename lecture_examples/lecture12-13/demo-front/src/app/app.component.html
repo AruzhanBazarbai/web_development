@@ -1,0 +1,12 @@
+<!-- если юзер не авторизовался предостаавляем форму для логина и полученные данные отправляем в бекенд -->
+<div *ngIf="!logged"> 
+    <h1>Login form</h1>
+    <p>Username: <input type="text" [(ngModel)]="username"></p>
+    <p>Password: <input type="text" [(ngModel)]="password"></p>
+    <button (click)="login()">Login</button> 
+</div>
+<!-- если авторизовался то предоставляем данные и кнопку для выхода -->
+<div *ngIf="logged">
+<router-outlet></router-outlet>
+<button (click)="logout()">Logout</button>
+</div>
