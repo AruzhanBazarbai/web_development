@@ -8,6 +8,7 @@
 <div *ngIf="logged">
   <a class="box2" routerLink="companies/"><h1>Companies</h1></a>
   <router-outlet></router-outlet>
+  <a routerLink="/vacancies/top_ten/"><h1>Top 10 vacancies</h1></a>
   <a routerLink="/"><button class="box3" (click)="logout()">Logout</button></a>
 </div>
 

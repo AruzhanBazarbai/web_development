@@ -19,4 +19,7 @@ export class VacancyService {
   getCompanyVacancies(id:number):Observable<Vacancy[]>{
     return this.http.get<Vacancy[]>(`${this.BASE_URL}api/companies/${id}/vacancies/`);
   }
+  getV10():Observable<Vacancy[]>{
+    return this.http.get<Vacancy[]>(`${this.BASE_URL}api/vacancies/top_ten/`);
+  }
 }

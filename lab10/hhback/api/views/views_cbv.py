@@ -96,3 +96,16 @@ class CompanyVacanciesAPIView(APIView):
 
         vacancies=Vacancy.objects.filter(company=cur_company)
         return Response(VacancySerializer(vacancies,many=True).data)
+
+# @csrf_exempt
+# def vacancies_top_ten(request):
+#     vacancies=Vacancy.objects.all().order_by('-salary')
+#     v_top10=[vacancies[i].to_json() for i in range(10)]
+#     return JsonResponse(v_top10,safe=False)
+
+class VacanciesTopTenAPIView(APIView):
+    permission_classes = (IsAuthenticated,)
+    def get(self,request):
+        vacancies=Vacancy.objects.all().order_by('-salary')
+        v_top10=[vacancies[i].to_json() for i in range(10)]
+        return Response(v_top10)
